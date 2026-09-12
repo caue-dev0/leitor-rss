@@ -9,6 +9,8 @@ import { fastifySwagger } from '@fastify/swagger'
 import { fastifyCors } from '@fastify/cors'
 import ScalarApiReference from '@scalar/fastify-api-reference'
 import { routes } from './routes/routes.js'
+import { register } from './routes/register.js'
+import { profile } from './routes/profile.js'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -25,7 +27,7 @@ app.register(fastifySwagger, {
   openapi: {
     info: {
       title: 'Webhook inspector API',
-      description: 'API for capturing and inspecting webhoow requests',
+      description: 'API for capturing and inspecting webhook requests',
       version: '1.0.0',
     },
   },
@@ -37,6 +39,8 @@ app.register(ScalarApiReference, {
 })
 
 app.register(routes)
+app.register(register)
+app.register(profile)
 
 app.listen({ port: 3333, host: '0.0.0.0' }).then(() => {
   console.log('🔥​ HTTP server running on http://localhost:3333/')

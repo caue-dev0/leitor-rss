@@ -2,9 +2,7 @@
   "version": "8",
   "dialect": "postgres",
   "id": "8b18513d-4af3-425d-82f2-6f63d91baeaf",
-  "prevIds": [
-    "1e8799e2-be50-4b60-bf81-698bb918cb24"
-  ],
+  "prevIds": ["1e8799e2-be50-4b60-bf81-698bb918cb24"],
   "ddl": [
     {
       "isRlsEnabled": false,
@@ -155,14 +153,10 @@
     },
     {
       "nameExplicit": false,
-      "columns": [
-        "userId"
-      ],
+      "columns": ["userId"],
       "schemaTo": "public",
       "tableTo": "users",
-      "columnsTo": [
-        "id"
-      ],
+      "columnsTo": ["id"],
       "onUpdate": "NO ACTION",
       "onDelete": "CASCADE",
       "name": "feed_userId_users_id_fkey",
@@ -171,9 +165,7 @@
       "table": "feed"
     },
     {
-      "columns": [
-        "id"
-      ],
+      "columns": ["id"],
       "nameExplicit": false,
       "name": "feed_pkey",
       "schema": "public",
@@ -181,9 +173,7 @@
       "entityType": "pks"
     },
     {
-      "columns": [
-        "id"
-      ],
+      "columns": ["id"],
       "nameExplicit": false,
       "name": "users_pkey",
       "schema": "public",
@@ -192,9 +182,7 @@
     },
     {
       "nameExplicit": false,
-      "columns": [
-        "email"
-      ],
+      "columns": ["email"],
       "nullsNotDistinct": false,
       "name": "users_email_key",
       "schema": "public",
